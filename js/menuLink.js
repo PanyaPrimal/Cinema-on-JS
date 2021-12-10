@@ -13,9 +13,6 @@ console.log('getNav: ', getNav);
 const menuLink = () => {
     getNav.forEach(nav => {
         nav.addEventListener('click', event => {
-            
-           // console.log('event: ', event.target);
-
             const target = event.target.closest('.get-nav__link');
 
             if (target) {
@@ -49,10 +46,8 @@ const menuLink = () => {
                         .then(data => renderCards(data.results))
                 }
             }
-
         })
     })
 };
-
 
 export default menuLink;

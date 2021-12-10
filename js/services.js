@@ -11,7 +11,6 @@ const getData = url => fetch(url)
         })
         .catch(err => console.error(err));
 
-
 export const getTrends = async (type = 'all', period = 'day', page = 1) => {
     const url = `${BASE_URL}trending/${type}/${period}?api_key=${API_KEY}${LANGUAGE}&page=${page}`;
     return await getData(url);
