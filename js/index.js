@@ -7,4 +7,4 @@ slideMenu({
     classActiveMenu: 'navigation_active',
     closeTrigger: '.navigation__link, .navigation__close',
 });
-console.log('loh')
+console.log('Ты можешь всё!')
