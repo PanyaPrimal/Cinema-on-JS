@@ -1,10 +1,10 @@
 import { getTrends } from './services.js';
-import renderCard from './renderCard.js';
+import renderCards from './renderCards.js';
 
 const filmWeek = document.querySelector('.film-week');
 
 const firstRender = data => {
-    
+
     filmWeek.innerHTML = `
     <div class="container film-week__container"
          data-rating="${data.vote_average}">
@@ -25,13 +25,13 @@ const firstRender = data => {
 
 const renderVideo = async () => {
     const data = await getTrends();
-
+    
     const [ firstCard, ...otherCard ] = data.results;
-    otherCard.lenght = 12;
+    otherCard.length = 16;
     firstRender(firstCard);
-    renderCard(otherCard);
+    renderCards(otherCard);
 };
 
 
-export default renderVideo();
+export default renderVideo;
 

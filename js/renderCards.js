@@ -1,19 +1,16 @@
-
-
 const listCard = document.querySelector('.other-films__list');
 
-const renderCard = data => {
+const renderCards = data => {
 
     listCard.textContent = '';
     
     const cards = data.map((item) => {
-
         const card = document.createElement('li');
         card.className = 'other-films__item';
 
         const link = document.createElement('a');
         link.className = 'other-films__link';
-        link.dataset.rating = item.vote_average;
+        link.dataset.rating = item.vote_average || '-';
 
         const img = document.createElement('img');
         img.className = 'other-films__img';
@@ -26,13 +23,7 @@ const renderCard = data => {
         return card;
     });
 
-    
-
     listCard.append(...cards);
-
-
 };
 
-
-
-export default renderCard;
+export default renderCards;
