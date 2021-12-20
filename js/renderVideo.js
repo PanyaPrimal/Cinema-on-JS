@@ -32,7 +32,7 @@ const firstRender = (data, { key }) => {
                 href="https://youtu.be/${key}"
                 aria-label="смотреть трейлер"></a>` : 
             ''}
-        
+            <a class="film-week__watch-trailer tube" href="https://youtu.be/${key}" aria-label="смотреть трейлер"></a>
     </div>
     `;
 };

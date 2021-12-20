@@ -24,6 +24,7 @@ export const getTop = async (type, page = 1) => {
 export const getPopular = async (type, page = 1) => {
     const url = `${BASE_URL}${type}/popular?api_key=${API_KEY}${LANGUAGE}&page=${page}`;
     return await getData(url);
+    
 };
 
 export const getVideo = async (id, type) => {
@@ -31,3 +32,7 @@ export const getVideo = async (id, type) => {
     return await getData(url);
 }
 
+export const search = async (query, page) => {
+    const url =  `${BASE_URL}search/multi?api_key=${API_KEY}${LANG}&page=${page}&include_adult=false&query=${query}`;
+    return await getData(url);
+};
